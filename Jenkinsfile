@@ -16,6 +16,8 @@ node {
                         sh "git config user.name SawsanSalahEldin"
                         //sh "git switch master"
                         sh "cat deployment.yaml"
+                        sh "sed -i 's+3788/gitops.*+3788/gitops:${DOCKERTAG}+g' deployment.yaml"
+
                         sh "sed -i '3788/gitops.*+3788/gitops:${DOCKERTAG}+g' deployment.yaml"
                         sh "cat deployment.yaml"
                         sh "git add ."
