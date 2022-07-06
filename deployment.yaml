@@ -30,7 +30,7 @@ metadata:
   labels:
     app: flask-svc
 spec:
-  type: lb-service
+  type: LoadBalancer
   ports:
   - port: 80
     targetPort: 5000
